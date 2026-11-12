@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Cupcake Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gourmet Cupcake Delivery 🧁☕</h1>
+        <p>Sabores especiais da semana e cafés selecionados</p>
+    </header>
+
+    <main class="container">
+        <!-- Vitrine de Produtos -->
+        <section class="cardapio">
+            <h2>Vitrine de Produtos</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <div>
+                        <h3>Cupcake Red Velvet Divino</h3>
+                        <p class="descricao">Delicioso cupcake com massa vermelha aveludada e recheio cremoso de cream cheese.</p>
+                        <p class="preco">R$ 18,90</p>
+                    </div>
+                    <button onclick="adicionarCarrinho('Cupcake Red Velvet Divino', 18.90)">Adicionar</button>
+                </div>
+                <div class="produto-card">
+                    <div>
+                        <h3>Cupcake Chocolate Trufado</h3>
+                        <p class="descricao">Massa de chocolate belga intensamente recheada com trufa artesanal.</p>
+                        <p class="preco">R$ 14,90</p>
+                    </div>
+                    <button onclick="adicionarCarrinho('Cupcake Chocolate Trufado', 14.90)">Adicionar</button>
+                </div>
+                <div class="produto-card">
+                    <div>
+                        <h3>Café Expresso Gourmet</h3>
+                        <p class="descricao">Grãos selecionados com notas aromáticas de chocolate e castanhas.</p>
+                        <p class="preco">R$ 7,50</p>
+                    </div>
+                    <button onclick="adicionarCarrinho('Café Expresso Gourmet', 7.50)">Adicionar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrinho de Compras -->
+        <section class="carrinho-secao">
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho">
+                <li class="vazio">O carrinho está vazio.</li>
+            </ul>
+            <p class="total">Total: R$ <span id="valor-total">0,00</span></p>
+
+            <div class="checkout">
+                <select id="pagamento">
+                    <option value="pix">Pix (Aprovação Instantânea)</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                </select>
+                <button class="btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+        </section>
+
+        <!-- Painel de Avaliações -->
+        <section class="avaliacao-secao">
+            <h2>Avaliar Produto ou Atendimento</h2>
+            <textarea id="comentario-aval" placeholder="Deixe seu feedback sobre os cupcakes e o serviço..."></textarea>
+            <button onclick="enviarAvaliacao()">Enviar Avaliação</button>
+        </section>
+
+        <div class="info-aluno">
+            <p>PIT II - Vitor Cruz Guerra (RGM: 33553548) | Sistemas de Informação</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
